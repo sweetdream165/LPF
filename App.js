@@ -20,7 +20,7 @@ class App {
                 node.innerHTML = xhr.responseText;
             }
         }
-        xhr.open('GET', `./components/${node.tagName}.html`, true)
+        xhr.open('GET', `./components/${node.tagName.toLowerCase()}.html`, true)
         xhr.send();
     }
 
@@ -36,7 +36,7 @@ class App {
                 document.body.appendChild(script)
             }
         }
-        xhr.open('GET', `./components/${node.tagName}.js`, true)
+        xhr.open('GET', `./components/${node.tagName.toLowerCase()}.js`, true)
         xhr.send();
     }
 }
